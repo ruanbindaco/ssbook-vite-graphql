@@ -1,0 +1,43 @@
+@import "../../defaults/colors/colors.scss";
+
+#book-card {
+  max-width: 136px;
+  width: 100%;
+  .img-block {
+    display: grid;
+    img {
+      max-width: 136px;
+      max-height: 198px;
+      height: 100%;
+      border-radius: 8px;
+      aspect-ratio: 3/4;
+    }
+  }
+
+  .text-block {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    gap: 2px;
+
+    .title {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 18px;
+      color: $color-text-default;
+    }
+
+    .author {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      color: $color-text-default-2;
+    }
+  }
+}

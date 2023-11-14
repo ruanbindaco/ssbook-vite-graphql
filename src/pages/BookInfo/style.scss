@@ -1,0 +1,144 @@
+@import "../../defaults/colors/colors.scss";
+
+#book-info {
+  max-width: 1000px;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  gap: 24px;
+  padding: 24px 32px 60px;
+
+  .background {
+    background-color: #ffffff;
+    width: 100vw;
+    position: absolute;
+    top: 19%;
+    left: 0;
+    height: -webkit-fill-available;
+    overflow: hidden;
+    z-index: -1;
+    box-shadow: 10px 0px 8px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 32px 0 0 0;
+  }
+
+  .left-column {
+    .img-block {
+      img {
+        max-width: 296px;
+        border-radius: 8px;
+      }
+    }
+
+    .icons-action {
+      .favorite,
+      .share,
+      .save-list {
+        display: flex;
+        gap: 12px;
+        padding: 13.5px 0;
+        cursor: pointer;
+
+        .label {
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          color: $color-text-default;
+        }
+      }
+
+      .share {
+        gap: 15px;
+      }
+    }
+  }
+
+  .right-column {
+    .head-text {
+      .title-fav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .title {
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: $color-text-default;
+      }
+
+      .author {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: $color-text-default-2;
+        padding: 12px 0 24px;
+      }
+    }
+
+    .body-text {
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 23px;
+      color: $color-text-default;
+      padding-top: 24px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #book-info {
+    height: 100vh;
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+    background-color: $color-backgroud-white;
+    .background {
+      top: 40%;
+      height: inherit;
+      z-index: 0;
+    }
+    .left-column {
+      .img-block {
+        width: 100%;
+        img {
+          max-width: 100%;
+          border-radius: 0;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .icons-action {
+        display: none;
+      }
+    }
+    .right-column {
+      padding: 32px 20px;
+      background-color: $color-backgroud-white;
+      border-radius: 32px 0 0 0;
+      position: absolute;
+      top: 40%;
+
+      .head-text {
+        .title {
+          font-size: 20px;
+        }
+
+        .author {
+          font-size: 14px;
+          padding: 8px 0 20px;
+        }
+      }
+
+      .body-text {
+        margin-bottom: 62px;
+        font-size: 16px;
+        padding-top: 0;
+      }
+    }
+  }
+}

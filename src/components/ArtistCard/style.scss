@@ -1,0 +1,42 @@
+@import "../../defaults/colors/colors.scss";
+
+#artist-card {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+  border-radius: 8px;
+  border: 1px solid $color-border-default-2;
+  min-width: 248px;
+  .img-block {
+    img {
+      max-width: 68px;
+      max-height: 68px;
+      aspect-ratio: 3/3;
+      border-radius: 8px;
+    }
+  }
+
+  .text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    gap: 5px;
+    .title {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 18px;
+      color: $color-text-default;
+    }
+
+    .books-count {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      color: $color-text-default-2;
+    }
+  }
+}

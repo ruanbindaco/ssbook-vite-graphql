@@ -1,0 +1,24 @@
+@import "../colors/colors.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Roboto, "sans-serif";
+  overflow-x: hidden;
+}
+
+.App {
+  position: relative;
+}
+
+.loading {
+  text-align: center;
+  padding: 32px 0;
+  font-size: 30px;
+}
+
+body {
+  background-color: $color-backgroud-default;
+}
